@@ -1,0 +1,36 @@
+Java ATM project:
+    *   *   *   *   *
+Card Object:
+var: cardId, pinCode, expDate, balance, ownData, status(enum:Active,Inactive)
+
+    *   *   *   *   *
+
+ATM Object:
+var: machineId, balance, location,status(enum:Active,Inactive)
+
+    *   *   *   *   *
+
+Transaction Object:
+var: cardList, atmList
+
+
+func:
+.addCard(ardId, pinCode, expDate, balance, ownData) - yangi carta yaratish |
+.addATM(machineId, balance, location, status) - yangi bankomat qo'shish |
+
+/**
+.removeCard(cardId,pinCode,ownData) - cartani yaroqsiz qilib qoyish |
+.removeATM(machineId,location) - bankomatni ochirib qoyish
+*/
+
+.addMoneyToCard(cardId, sum) - kartaga pul qo'shish |
+.addMoneyToATM(machineId) - bankomatga pul qo'shish |
+.removeMoneyToCard(cardId, pinCode, sum) - kartaga pul yechish |
+.removeMoneyToATM(machineId, sum) - bankomatga pul yechish |
+.getCash(cardId, pinCode, machineId, sum) - naqd pul olish |
+.changePinCodeInCard(cardId,oldPin, ownDate, newPin) - kartani parolini almashtirish |
+.sendMoney(senderCardId, pinCode, resiverCardId, sum) -  bitta kartadan, boshqa kertaga pul otqazish |
+.showCardList() - kartalr royxatini qaytarish |
+.showATMList() - bankomatlarni royxatini qaytarish |
+.theRichestOne() -  eng kop pullik inson |
+.thePoorestOne() - eng kam pullik inson
